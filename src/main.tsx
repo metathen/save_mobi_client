@@ -5,17 +5,36 @@ import App from "./App"
 import { store } from "./app/store"
 import "./index.css"
 import {NextUIProvider} from "@nextui-org/react";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import { Login } from "./pages/login"
+import { Admin } from "./pages/admin"
+import { Home } from "./pages/home"
 
 const container = document.getElementById("root")
 
 if (container) {
-  const root = createRoot(container)
+  const root = createRoot(container);
+
+  const router = createBrowserRouter([
+    {
+      path: '/login',
+      element: <Login />
+    },
+    {
+      path: '/admin',
+      element: <Admin />
+    },
+    {
+      path: "/",
+      element: <Home />
+    }
+  ])
 
   root.render(
     <React.StrictMode>
       <Provider store={store}>
         <NextUIProvider>
-          <App />
+          <RouterProvider router={router} />
         </NextUIProvider>
       </Provider>
     </React.StrictMode>,
