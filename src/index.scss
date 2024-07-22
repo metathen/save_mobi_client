@@ -7,15 +7,19 @@
     --font-size: 16px;
     --fs-big: 4.3758rem;
     --fs-md: 1.375rem;
+    --fs-sd: 1.875rem;
     --lh-big: 127%;
+    --lh-sd: 108%;
   
     /*color*/
     --white: #fff;
     --dark: #0E0D0D;
     --black: #000;
+    --dark-md: #1D1B1B;
   
     /*radius*/
     --r-md: 2.75rem;
+    --r-std: 0.625rem;
 }
 
 body {
@@ -35,6 +39,7 @@ code {
 
 .box {
     max-width: 1648px;
+    padding-inline: 20px;
     width: 100%;
     margin-inline: auto;
     &-banner {
@@ -49,11 +54,16 @@ code {
         line-height: var(--lh-big);
     }
     &-md {font-size: var(--fs-md);}
+    &-sd {
+        font-size: var(--fs-sd);
+        line-height: var(--lh-sd);
+    }
 }
 
 .r {
-    &-circle {border-radius: 50%}
+    &-circle {border-radius: 50%;}
     &-md {border-radius: var(--r-md);}
+    &-std {border-radius: var(--r-std);}
 }
 
 .c {
@@ -67,4 +77,27 @@ code {
 
 .pointer {
     &-none {pointer-events: none;}
+}
+
+.service {
+    padding: 80px 0 160px;
+    &-items {
+        display: grid;
+        grid-template-columns: .336fr .336fr .336fr;
+        gap: 20px;
+    }
+    &-card {
+        background-color: var(--dark-md);
+        color: var(--white);
+        & .service {
+            &-subtitle {
+                opacity: 0;
+                pointer-events: none;
+                transition: all .3s ease-in;
+            }
+        }
+        &:hover {
+            & .service {&-subtitle {opacity: 1;}}
+        }
+    }
 }
