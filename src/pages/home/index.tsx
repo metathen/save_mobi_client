@@ -18,6 +18,11 @@ export const Home = () => {
   return (
     <>
       <Header list={menuArr} />
+      <Banner 
+        text='ВОСКРЕШЕНИЕ СМАРТФОНОВ: ПРОФЕССИОНАЛЬНЫЙ РЕМОНТ И СЕРВИС, КОТОРЫЙ ДАРИТ ВТОРУЮ ЖИЗНЬ ВАШЕМУ ГАДЖЕТУ' 
+        logo='' 
+        image='../../../image-times/Rectangle 167 (2).png' 
+      />
     </>
   )
 }
