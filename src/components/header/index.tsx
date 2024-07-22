@@ -1,5 +1,6 @@
-import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger, Link } from '@nextui-org/react';
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@nextui-org/react';
 import { Menu } from '../../app/types';
+import { Link } from 'react-router-dom';
 
 type Props = {
     list: Menu[];
@@ -12,6 +13,7 @@ export const Header = ({list}: Props) => {
                 <Dropdown 
                     backdrop='blur' 
                     className='fs-md' 
+                    placement='bottom-end'
                     style={{width: '500px', border: '0', borderColor: 'transparent'}}
                 >
                     <DropdownTrigger>
@@ -23,7 +25,7 @@ export const Header = ({list}: Props) => {
                         {list.map(i => (
                             <DropdownItem key={i.id}>
                                 <Link 
-                                    href={i.path} 
+                                    to={i.path} 
                                     className='font-semibold fs-md py-2 px-2' 
                                     style={{color: "black"}}
                                 >
