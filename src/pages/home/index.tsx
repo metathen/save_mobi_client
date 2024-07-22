@@ -1,6 +1,7 @@
 import React from 'react'
 import { Banner } from '../../components/Banner'
 import { Header } from '../../components/header'
+import { Service } from '../../components/service'
 
 export const Home = () => {
   const menuArr = [
@@ -23,6 +24,7 @@ export const Home = () => {
         logo='' 
         image='../../../image-times/Rectangle 167 (2).png' 
       />
+      <Service />
     </>
   )
 }
