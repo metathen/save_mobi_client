@@ -3,3 +3,11 @@ export type Menu = {
     path: string;
     name: string;
 }
+
+export type ServiceItem = {
+    id: string;
+    title: string;
+    subtitle?: string;
+    price?: string;
+    image: string;
+}
