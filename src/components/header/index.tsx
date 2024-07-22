@@ -21,12 +21,12 @@ export const Header = ({list}: Props) => {
                             меню
                         </Button>
                     </DropdownTrigger>
-                    <DropdownMenu className='box p-2'>
+                    <DropdownMenu className='box px-2 py-6'>
                         {list.map(i => (
                             <DropdownItem key={i.id}>
                                 <Link 
                                     to={i.path} 
-                                    className='font-semibold fs-md py-2 px-2' 
+                                    className='font-semibold fs-md py-4 px-2' 
                                     style={{color: "black"}}
                                 >
                                     {i.name}

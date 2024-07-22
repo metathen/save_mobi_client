@@ -31,7 +31,7 @@ export const Service = () => {
         <section className='service' id='service' style={{color: 'white'}}>
             <div className="service-box box">
                 <SectionTitle text='Услуги' />
-                <div className="service-items w-full pt-[40px]">
+                <div className="service-items w-full pt-[40px] d-grid col-3 gap-[20px]">
                     {
                         arrItems.length > 0 ? arrItems.map((i) => (
                             <SectionCard 
