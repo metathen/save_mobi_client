@@ -101,11 +101,17 @@ code {
         & .service {
             &-subtitle {
                 opacity: 0;
+                transform: translateY(40%);
                 transition: var(--t-md);
             }
         }
         &:hover {
-            & .service {&-subtitle {opacity: 1;}}
+            & .service {
+                &-subtitle {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+            }
         }
     }
 }

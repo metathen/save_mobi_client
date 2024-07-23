@@ -94,10 +94,12 @@ code {
 }
 .service-card .service-subtitle {
   opacity: 0;
+  transform: translateY(40%);
   transition: var(--t-md);
 }
 .service-card:hover .service-subtitle {
   opacity: 1;
+  transform: translateY(0%);
 }
 
 .product {
