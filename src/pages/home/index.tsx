@@ -2,6 +2,7 @@ import React from 'react'
 import { Banner } from '../../components/Banner'
 import { Header } from '../../components/header'
 import { Service } from '../../components/service'
+import { Products } from '../../components/products'
 
 export const Home = () => {
   const menuArr = [
@@ -14,6 +15,11 @@ export const Home = () => {
       id: '123',
       path: '#form',
       name: 'оставить заявку'
+    },
+    {
+      id: '1234',
+      path: '#product',
+      name: 'продукты'
     }
   ]
   return (
@@ -25,6 +31,7 @@ export const Home = () => {
         image='../../../image-times/Rectangle 167 (2).png' 
       />
       <Service />
+      <Products />
     </>
   )
 }
