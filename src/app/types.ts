@@ -10,4 +10,16 @@ export type ServiceItem = {
     subtitle?: string;
     price?: string;
     image: string;
+    createdAt?: Date;
+    updatedAt?: Date;
+}
+
+export type ProductItem = {
+    id: string;
+    title: string;
+    image: string;
+    subtitle?: string;
+    price?: string;
+    createdAt?: Date;
+    updatedAt?: Date;
 }
