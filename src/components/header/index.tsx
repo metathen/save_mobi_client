@@ -14,6 +14,8 @@ export const Header = ({list}: Props) => {
                     backdrop='blur' 
                     className='fs-md' 
                     placement='bottom-end'
+                    type='menu'
+                    shouldBlockScroll={true}
                     style={{width: '500px', border: '0', borderColor: 'transparent'}}
                 >
                     <DropdownTrigger>
@@ -21,7 +23,11 @@ export const Header = ({list}: Props) => {
                             меню
                         </Button>
                     </DropdownTrigger>
-                    <DropdownMenu className='box px-2 py-6'>
+                    <DropdownMenu 
+                        className='box px-2 py-6' 
+                        variant='flat'
+                        color='primary'
+                    >
                         {list.map(i => (
                             <DropdownItem key={i.id}>
                                 <Link 
