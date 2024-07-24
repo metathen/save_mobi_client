@@ -12,28 +12,25 @@ export const Header = ({list}: Props) => {
             <div className="header-box box flex justify-end">
                 <Dropdown 
                     backdrop='blur' 
-                    className='fs-md' 
+                    className='text-small dark bg-background border-background' 
                     placement='bottom-end'
                     type='menu'
                     shouldBlockScroll={true}
                     style={{width: '500px', border: '0', borderColor: 'transparent'}}
                 >
                     <DropdownTrigger>
-                        <Button className='fs-md white px-[20px] pb-[9px] pt-[4px] r-md c-bg-dark c-el-white'>
+                        <Button className='text-small white px-[20px] pb-[9px] pt-[4px] r-md bg-background-dark save text-primary-100'>
                             меню
                         </Button>
                     </DropdownTrigger>
                     <DropdownMenu 
-                        className='box px-2 py-6' 
-                        variant='flat'
-                        color='primary'
+                        className='box px-2 py-6 flex flex-col gap-10 dark bg-background'
                     >
                         {list.map(i => (
-                            <DropdownItem key={i.id}>
+                            <DropdownItem key={i.id} className="h-[60px]">
                                 <Link 
                                     to={i.path} 
-                                    className='font-semibold fs-md py-4 px-2' 
-                                    style={{color: "black"}}
+                                    className='font-semibold text-small px-2 save flex text-primary-100 w-full h-full'
                                 >
                                     {i.name}
                                 </Link>

@@ -35,7 +35,7 @@ export const Products = () => {
     return (
         <section className="product" id='product' style={{color: 'white'}}>
             <div className="product-box box">
-                <SectionTitle text='Продукты' />
+                <SectionTitle text='Товары' />
                 <div className="product-items d-grid col-2 gap-[20px] pt-[40px]">
                     {
                         productArr.length > 0 ? productArr.map(i => (

@@ -7,6 +7,6 @@ type Props = {
 
 export const SectionTitle = ({text, classDef} : Props) => {
     return (
-        <div className='font-semibold fs-sd uppercase'>{text}</div>
+        <div className='font-semibold text-medium font-medium uppercase'>{text}</div>
     )
 }

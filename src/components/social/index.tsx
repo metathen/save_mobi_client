@@ -11,7 +11,7 @@ type Props = {
 
 export const Social = ({content, linkColor, Icon, iconColor, link}: Props) => {
     return (
-        <Tooltip showArrow={true} content={content}>
+        <Tooltip showArrow={true} content={content} className='text-tiny font-semibold py-[5px]'>
             <Link 
                 href={link}
                 target='_blank'
