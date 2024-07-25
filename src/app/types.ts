@@ -2,6 +2,7 @@ export type Menu = {
     id: string;
     path: string;
     name: string;
+    createdAt?: Date;
 }
 
 export type ServiceItem = {
@@ -17,9 +18,16 @@ export type ServiceItem = {
 export type ProductItem = {
     id: string;
     title: string;
+    model?: CompleteItem[];
     image: string;
     subtitle?: string;
     price?: string;
     createdAt?: Date;
     updatedAt?: Date;
+}
+
+export type CompleteItem = {
+    id: string;
+    name: string;
+    createdAt?: Date;
 }
