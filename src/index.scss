@@ -20,6 +20,7 @@
     /*radius*/
     --r-md: 2.75rem;
     --r-std: 0.625rem;
+    --r-fs: 4.125rem;
 
     /*bezier*/
     --t-md: all .6s cubic-bezier(0.23, 1, 0.320, 1);
@@ -63,6 +64,7 @@ code {
     &-circle {border-radius: 50%;}
     &-md {border-radius: var(--r-md);}
     &-std {border-radius: var(--r-std);}
+    &-fs {border-radius: var(--r-fs);}
 }
 
 .d {
@@ -73,7 +75,7 @@ code {
             &-3 {grid-template-columns: .336fr .336fr .336fr;}
         }
     }
-}
+} 
 
 .pointer {
     &-none {pointer-events: none;}

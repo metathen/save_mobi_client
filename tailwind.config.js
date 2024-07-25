@@ -21,6 +21,10 @@ export default {
           large: "4.3758rem", // text-large line-large
         },
         lineHeight: {
+          small: {
+            md: "138%",
+            sd: '2rem'
+          },
           medium: "108%",
           large: '127%'
         }

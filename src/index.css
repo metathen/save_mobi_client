@@ -16,6 +16,7 @@
   /*radius*/
   --r-md: 2.75rem;
   --r-std: 0.625rem;
+  --r-fs: 4.125rem;
   /*bezier*/
   --t-md: all .6s cubic-bezier(0.23, 1, 0.320, 1);
 }
@@ -57,6 +58,9 @@ code {
 }
 .r-std {
   border-radius: var(--r-std);
+}
+.r-fs {
+  border-radius: var(--r-fs);
 }
 
 .d-grid {
