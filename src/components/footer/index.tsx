@@ -6,7 +6,15 @@ export const Footer = () => {
     const footArr = [
         {
             id: '1',
-            name: 'login'
+            name: 'Huawei'
+        },
+        {
+            id: '2',
+            name: "Xiaomi"
+        },
+        {
+            id: "#",
+            name: "Apple"
         }
     ]
     return (
