@@ -3,6 +3,7 @@ import { Banner } from '../../components/Banner'
 import { Header } from '../../components/header'
 import { Service } from '../../components/service'
 import { Products } from '../../components/products'
+import { Footer } from '../../components/footer'
 
 export const Home = () => {
   const menuArr = [
@@ -32,6 +33,7 @@ export const Home = () => {
       />
       <Service />
       <Products />
+      <Footer />
     </>
   )
 }
