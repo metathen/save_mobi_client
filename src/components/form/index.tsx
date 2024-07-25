@@ -1,15 +1,37 @@
-import { Autocomplete, AutocompleteItem, Input, Textarea } from '@nextui-org/react';
+import { Autocomplete, AutocompleteItem, Input, Textarea, Button, Link } from '@nextui-org/react';
 import { CompleteItem } from '../../app/types';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { CheckboxItem } from '../checkbox';
 
 type Props = {
   list: CompleteItem[];
 }
 
+type Form = {
+  name?: string;
+  email: string;
+  telephone: string;
+  model?: string;
+  description?: string;
+}
+
 export const Form = ({list}: Props) => {
-  const [touched, setTouched] = useState(false);
+  const {handleSubmit, control} = useForm<Form>({
+    mode: "onChange",
+    reValidateMode: "onBlur",
+    defaultValues: {
+      email: "",
+      name: "",
+      telephone: "",
+      model: "",
+      description: ""
+    }
+
+  });
+  const onSubmit = async () => {};
   return (
-    <form id='form' className='form'>
+    <form id='form' className='form' onSubmit={onSubmit}>
       <div className="flex gap-[139px]">
         <div className='w-[42%]'>
           <Input 
@@ -46,7 +68,6 @@ export const Form = ({list}: Props) => {
             labelPlacement='outside'
             defaultItems={list}
             variant='underlined'
-            errorMessage={touched ? 'Выберите вариант из списка' : ''}
             className='save text-primary-100 border-background'
           >
             {item => <AutocompleteItem key={item.id} className='save bg-background border-background text-primary-100'>{item.name}</AutocompleteItem>}
@@ -60,6 +81,22 @@ export const Form = ({list}: Props) => {
           />
         </div>
       </div>
+      <div className="check mt-[28px]">
+        <CheckboxItem
+          text={
+            <p className='save text-primary-50 text-small'>
+              Я согласен с <Link href='#' className='underline save text-primary-100 text-small'>правилами обработки персональных данных</Link>
+            </p>
+          } 
+        />
+      </div>
+      <Button
+        type='submit'
+        variant='bordered'
+        className='text-small py-[8px] px-[77px] r-fs save text-primary-50 line-small-sd h-[50px] mt-[60px]'
+      >
+        Отправить
+      </Button>
     </form>
   )
 }
