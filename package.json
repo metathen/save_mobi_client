@@ -23,7 +23,8 @@
     "react-hook-form": "^7.52.1",
     "react-icons": "^5.2.1",
     "react-redux": "^9.1.0",
-    "react-router-dom": "^6.25.1"
+    "react-router-dom": "^6.25.1",
+    "tailwindcss-scrollbar": "^0.1.0"
   },
   "devDependencies": {
     "@testing-library/dom": "^9.3.4",
