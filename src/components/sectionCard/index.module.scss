@@ -1,0 +1,19 @@
+.service {
+	&-box {
+		background-color: #1d1b1b;
+	}
+	&-img {width: 226px; height: 226px;}
+}
+
+@media(min-width: 1024px) {
+	.service {
+		&-box {
+			&:hover {
+				transform: scale(.99);
+				& .service {
+					&-img {width: 326px; height: 326px;}
+				}
+			}
+		}
+	}
+}
