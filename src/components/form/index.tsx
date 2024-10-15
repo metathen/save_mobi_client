@@ -27,8 +27,11 @@ export const Form = ({list}: Props) => {
       model: "",
       description: ""
     }
-
   });
+  const darkBackgroundStyle = {
+    backgroundColor: 'black',
+    color: 'white',
+  };
   const onSubmit = async () => {};
   return (
     <form id='form' className='form' onSubmit={onSubmit}>
@@ -36,7 +39,7 @@ export const Form = ({list}: Props) => {
         <div className='w-[42%]'>
           <Input 
             type='text'
-            label="Имя"
+            label="имя"
             variant='underlined'
             className="dark flex text-primary-100 w-full text-tiny pb-[45px]"
             labelPlacement='outside'
@@ -45,7 +48,7 @@ export const Form = ({list}: Props) => {
           />
           <Input 
             type='email'
-            label="Email"
+            label="email"
             variant='underlined'
             className="save flex text-primary-100 w-full pb-[45px]"
             labelPlacement='outside'
@@ -54,7 +57,7 @@ export const Form = ({list}: Props) => {
           />
           <Input 
             type='tel'
-            label="Телефон"
+            label="телефон"
             variant='underlined'
             className="save flex text-primary-100 w-full"
             labelPlacement='outside'
@@ -64,16 +67,17 @@ export const Form = ({list}: Props) => {
         </div>
         <div className="w-[42%] flex flex-col justify-between">
           <Autocomplete
-            label="Марка устройства"
+            label="марка устройства"
             labelPlacement='outside'
             defaultItems={list}
             variant='underlined'
             className='save text-primary-100 border-background'
+            style={{ ...darkBackgroundStyle }}
           >
             {item => <AutocompleteItem key={item.id} className='save bg-background border-background text-primary-100'>{item.name}</AutocompleteItem>}
           </Autocomplete>
           <Textarea
-            label="Описание проблемы" 
+            label="описание проблемы" 
             labelPlacement='outside'
             rows={60}
             variant='underlined'
@@ -85,7 +89,7 @@ export const Form = ({list}: Props) => {
         <CheckboxItem
           text={
             <p className='save text-primary-50 text-small'>
-              Я согласен с <Link href='#' className='underline save text-primary-100 text-small'>правилами обработки персональных данных</Link>
+              я согласен с <Link href='#' className='underline save text-primary-100 text-small'>правилами обработки персональных данных</Link>
             </p>
           } 
         />
@@ -93,7 +97,9 @@ export const Form = ({list}: Props) => {
       <Button
         type='submit'
         variant='bordered'
+        as='a'
         className='text-small py-[8px] px-[77px] r-fs save text-primary-50 line-small-sd h-[50px] mt-[60px]'
+        onClick={(e) => e.preventDefault()}
       >
         Отправить
       </Button>

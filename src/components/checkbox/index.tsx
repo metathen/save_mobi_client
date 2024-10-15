@@ -7,7 +7,7 @@ type Props = {
 
 export const CheckboxItem = ({text}: Props) => {
   return (
-    <Checkbox>
+    <Checkbox size="lg">
         {text}
     </Checkbox>
   )

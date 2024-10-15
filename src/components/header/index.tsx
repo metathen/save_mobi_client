@@ -28,8 +28,8 @@ export const Header = ({list}: Props) => {
                     >
                         {list.map(i => (
                             <DropdownItem key={i.id} className="h-[60px]">
-                                <Link 
-                                    to={i.path} 
+                                <Link
+                                    to={`#${i.path}`} 
                                     className='font-semibold text-small px-2 save flex text-primary-100 w-full h-full'
                                 >
                                     {i.name}

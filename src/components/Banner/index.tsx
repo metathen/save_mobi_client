@@ -1,5 +1,5 @@
 import { Card, CardHeader, Image } from "@nextui-org/react"
-import { FaTelegram } from "react-icons/fa";
+import { FaTelegram, FaTelegramPlane } from "react-icons/fa";
 import { Social } from "../social";
 
 type Props = {
@@ -26,9 +26,11 @@ export const Banner = ({text, image, logo}: Props) => {
         <Social 
           link="https://telegram.com"
           content="Переход в телеграм" 
-          linkColor="bg-white"
-          Icon={FaTelegram} 
-          iconColor="36ACDE" 
+          bgColor="bg-tg"
+          width="50px"
+          height="50px"
+          Icon={FaTelegramPlane} 
+          iconColor="#FFFFFF" 
         />
       </div>
     </Card>

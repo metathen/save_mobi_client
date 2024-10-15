@@ -10,7 +10,7 @@ export const ProductCard = ({id, title, subtitle, image, price}: ProductItem) =>
         </CardHeader>
         <Image 
             removeWrapper
-            className="w-full h-full absolute top-0 left-0 z-0 rounded-tiny"
+            className="w-full h-full absolute top-0 left-0 z-110 rounded-tiny"
             src={image}
             alt={title}
         />

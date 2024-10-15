@@ -3,21 +3,24 @@ import { IconType } from 'react-icons';
 
 type Props = {
     content: string;
-    linkColor?: string;
+    bgColor?: string;
     Icon: IconType;
     iconColor: string;
+    width?: string;
+    height?: string;
     link: string;
 }
 
-export const Social = ({content, linkColor, Icon, iconColor, link}: Props) => {
+export const Social = ({content, Icon, bgColor, width, height, iconColor, link}: Props) => {
     return (
-        <Tooltip showArrow={true} content={content} className='text-tiny font-semibold py-[5px]'>
+        <Tooltip content={content} className='text-tiny font-semibold py-[5px]'>
             <Link 
                 href={link}
                 target='_blank'
-                className={`r-circle ${linkColor} w-[46px] h-[46px] flex items-center justify-center`}
+                className={`r-circle ${bgColor} flex items-center justify-center`}
+                style={{width, height}}
             >
-                <Icon color={iconColor} className="w-[120%] h-[120%]" />
+                <Icon color={iconColor} className={`w-[60%]`} />
             </Link>
         </Tooltip>
     )

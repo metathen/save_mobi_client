@@ -25,9 +25,18 @@ export const FooterContact = (
           <Link className='text-small text-primary-50' href={`mailto:${mail}`}>{mail}</Link>
         </div>
       </div>
-      <div className="flex gap-8">
-        <Social content='Перейти в телеграм' link={`${telegram}`} Icon={FaTelegramPlane} iconColor='' />
-        <Social content='Перейти в инстаграм' link={`${inst}`} Icon={FaInstagram} iconColor='' />
+      <div className="flex gap-2">
+        <Social content='Перейти в телеграм' link={`${telegram}`} Icon={FaTelegramPlane} iconColor='white'
+          width='60px'
+          height='60px' 
+        />
+        <Social content='Перейти в инстаграм' 
+          link={`${inst}`} 
+          Icon={FaInstagram} 
+          iconColor='white'
+          width='60px'
+          height='60px'
+        />
       </div>
       <div className="flex text-small gap-10 adress">
         <p>{address}</p>
