@@ -13,12 +13,17 @@
   --dark: #0E0D0D;
   --black: #000;
   --dark-md: #1D1B1B;
+  --telegram-theme: #24A1DE;
   /*radius*/
   --r-md: 2.75rem;
   --r-std: 0.625rem;
   --r-fs: 4.125rem;
   /*bezier*/
   --t-md: all .6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -28,15 +33,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
 }
+body::-webkit-scrollbar {
+  width: 18px;
+}
 body::-webkit-scrollbar-track {
-  background-color: var(--white);
+  background-color: var(--dark);
 }
 body::-webkit-scrollbar-thumb {
-  background-color: var(--dark);
+  background-color: var(--white);
+  border: 4px solid var(--dark);
+  border-radius: var(--r-md);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.transition-1 {
+  transition: var(--t-md);
 }
 
 .box {
@@ -73,6 +87,10 @@ code {
   grid-template-columns: 0.336fr 0.336fr 0.336fr;
 }
 
+.bg-tg {
+  background-color: var(--telegram-theme);
+}
+
 .pointer-none {
   pointer-events: none;
 }
@@ -89,6 +107,9 @@ code {
   opacity: 1;
   transform: translateY(0%);
 }
+.service-item {
+  background-color: var();
+}
 
 .product {
   padding-bottom: 160px;
@@ -103,7 +124,10 @@ code {
   transform: translateY(0%);
 }
 .product-card:hover .product-mask {
-  background-color: rgba(0, 0, 0, 0.2078431373);
+  background-color: rgba(0, 0, 0, 0.5607843137);
+}
+.product-card:hover img {
+  transform: scale(1.1);
 }
 .product-mask {
   transition: var(--t-md);
@@ -111,4 +135,8 @@ code {
 
 .form {
   padding-block: 40px 120px;
+}
+
+.adress {
+  max-width: 30%;
 }

@@ -8,10 +8,12 @@ export default {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+    },
   },
   darkMode: "class",
   plugins: [
+    require('tailwindcss-scrollbar'),
     nextui({
       layout: {
         fontSize: {
@@ -19,6 +21,7 @@ export default {
           small: "1.375rem", // text-small
           medium: "1.875rem", // text-medium
           large: "4.3758rem", // text-large line-large
+          drop: '1.125rem'
         },
         lineHeight: {
           small: {

@@ -3,6 +3,7 @@ import { CompleteItem } from '../../app/types';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { CheckboxItem } from '../checkbox';
+import './index.css';
 
 type Props = {
   list: CompleteItem[];
@@ -35,8 +36,8 @@ export const Form = ({list}: Props) => {
   const onSubmit = async () => {};
   return (
     <form id='form' className='form' onSubmit={onSubmit}>
-      <div className="flex gap-[139px]">
-        <div className='w-[42%]'>
+      <div className="flex form-box justify-between">
+        <div className='w-[46%]'>
           <Input 
             type='text'
             label="имя"
@@ -65,7 +66,7 @@ export const Form = ({list}: Props) => {
             size='md'
           />
         </div>
-        <div className="w-[42%] flex flex-col justify-between">
+        <div className="w-[46%] flex flex-col justify-between">
           <Autocomplete
             label="марка устройства"
             labelPlacement='outside'
@@ -79,7 +80,7 @@ export const Form = ({list}: Props) => {
           <Textarea
             label="описание проблемы" 
             labelPlacement='outside'
-            rows={60}
+            rows={10}
             variant='underlined'
             className="save flex text-primary-100 w-full"
           />

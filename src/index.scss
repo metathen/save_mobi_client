@@ -16,6 +16,7 @@
     --dark: #0E0D0D;
     --black: #000;
     --dark-md: #1D1B1B;
+    --telegram-theme: #24A1DE;
   
     /*radius*/
     --r-md: 2.75rem;
@@ -24,6 +25,10 @@
 
     /*bezier*/
     --t-md: all .6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -35,11 +40,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--black);
   &::-webkit-scrollbar {
+    width: 18px;
     &-track {
-        background-color: var(--white);
+        background-color: var(--dark);
     }
     &-thumb {
-        background-color: var(--dark);
+        background-color: var(--white);
+        border: 4px solid var(--dark);
+        border-radius: var(--r-md);
     }
   }
 }
@@ -47,6 +55,10 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.transition {
+    &-1 {transition: var(--t-md);}
 }
 
 .box {
@@ -77,6 +89,10 @@ code {
     }
 } 
 
+.bg {
+    &-tg {background-color: var(--telegram-theme);}
+}
+
 .pointer {
     &-none {pointer-events: none;}
 }
@@ -100,6 +116,7 @@ code {
             }
         }
     }
+    &-item {background-color: var();}
 }
 
 .product {
@@ -117,8 +134,11 @@ code {
                     transform: translateY(0%);
                 }
                 &-mask {
-                    background-color: #00000035;
+                    background-color: #0000008f;
                 }
+            }
+            & img {
+                transform: scale(1.1);
             }
         }
     }
@@ -127,4 +147,8 @@ code {
 
 .form {
     padding-block: 40px 120px;
+}
+
+.adress {
+    max-width: 30%;
 }

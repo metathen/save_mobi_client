@@ -1,0 +1,3 @@
+.product {
+	&-char p {display: flex;justify-content:space-between;padding-bottom:5px;&:not(:last-child){border-bottom:1px dotted gray;}}
+}

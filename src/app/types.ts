@@ -20,10 +20,19 @@ export type ProductItem = {
     title: string;
     model?: CompleteItem[];
     image: string;
+    ram: string;
+    type: string;
+    processor: string;
+    year: number;
     subtitle?: string;
     price?: string;
     createdAt?: Date;
     updatedAt?: Date;
+}
+
+export type ProductParametr = {
+    name: string;
+    value: string | number;
 }
 
 export type CompleteItem = {

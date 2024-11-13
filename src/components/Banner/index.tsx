@@ -1,7 +1,7 @@
 import { Card, CardHeader, Image } from "@nextui-org/react"
 import { FaTelegram, FaTelegramPlane } from "react-icons/fa";
 import { Social } from "../social";
-import './index.css';
+import styled from './index.module.css';
 
 type Props = {
   text: string;
@@ -21,7 +21,7 @@ export const Banner = ({text, image, logo}: Props) => {
         loading="lazy"
       />
       <div className="flex justify-between items-center overflow-hidden py-1 z-10 box box-center">
-        <p className="z-2 text-white uppercase font-semibold box-banner banner-text">
+        <p className={`z-2 text-white uppercase font-semibold box-banner ${styled['banner-text']}`}>
           {text}
         </p>
         <Social 

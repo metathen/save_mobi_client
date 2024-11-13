@@ -11,7 +11,7 @@
     transform: scale(0.99);
   }
   .service-box:hover .service-img {
-    width: 326px;
-    height: 326px;
+    width: 70%;
+    height: 70%;
   }
 }

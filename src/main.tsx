@@ -9,6 +9,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { Login } from "./pages/login"
 import { Admin } from "./pages/admin"
 import { Home } from "./pages/home"
+import { Header } from "./components/header"
+import { Footer } from "./components/footer"
 
 const container = document.getElementById("root")
 
@@ -30,11 +32,31 @@ if (container) {
     }
   ])
 
+  const menuArr = [
+    {
+      id: '12',
+      path: 'service',
+      name: 'услуги'
+    },
+    {
+      id: '123',
+      path: 'form',
+      name: 'оставить заявку'
+    },
+    {
+      id: '1234',
+      path: 'product',
+      name: 'продукты'
+    }
+  ]
+
   root.render(
     <React.StrictMode>
       <Provider store={store}>
         <NextUIProvider>
+          <Header list={menuArr} />
           <RouterProvider router={router} />
+          <Footer />
         </NextUIProvider>
       </Provider>
     </React.StrictMode>,
